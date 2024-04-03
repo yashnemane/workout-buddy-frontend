@@ -5,12 +5,14 @@ import { useWorkoutsContext } from "./hooks/useWorkoutsContext"
 import WorkoutDetails from '../pages/components/WorkoutDetails'
 import WorkoutForm from '../pages/components/WorkoutForm'
 
+const backendBaseURL="https://workout-buddy-backend-pmfl.onrender.com/"
+
 const Home = () => {
   const {workouts, dispatch } = useWorkoutsContext()
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('/api/workouts')
+      const response = await fetch(`${backendBaseURL}api/workouts`)
       const json = await response.json()
 
       if(response.ok){

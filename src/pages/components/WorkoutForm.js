@@ -9,12 +9,14 @@ const WorkoutForm = () => {
     const[error, setError] = useState(null)
     const [emptyFields, setEmptyFields] = useState([]) 
 
+    const backendBaseURL="https://workout-buddy-backend-pmfl.onrender.com/"
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
         const workout = {title, load, reps}
 
-        const response = await fetch('/api/workouts', {
+        const response = await fetch(`${backendBaseURL}api/workouts`, {
             method: 'POST',
             body: JSON.stringify(workout),
             headers: {
