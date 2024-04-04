@@ -11,8 +11,8 @@ const WorkoutDetails = ({ workout }) => {
         const response = await fetch(`${backendBaseURL}api/workouts/` + workout._id, {
             method: 'DELETE'.
             headers: {
-              /*'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',*/
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',
               'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
       })
 
