@@ -13,8 +13,7 @@ const WorkoutDetails = ({ workout }) => {
             headers: {
               /*'Access-Control-Allow-Origin': '*',
               'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',*/
-              'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-               "Content-type": "application/json"
+              'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
       })
 
         /*const response = await fetch('https://workout-buddy-backend-pmfl.onrender.com/api/workouts/' + workout._id, {
