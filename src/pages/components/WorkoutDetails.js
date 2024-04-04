@@ -12,7 +12,7 @@ const WorkoutDetails = ({ workout }) => {
             method: 'DELETE'
         })*/
 
-        const response = await fetch(`${backendBaseURL}api/workouts/${workout._id}`, {
+        const response = await fetch('https://workout-buddy-backend-pmfl.onrender.com/api/workouts'+workout._id, {
             method: 'DELETE'
         })
         
