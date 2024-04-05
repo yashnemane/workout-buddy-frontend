@@ -24,7 +24,11 @@ const WorkoutDetails = ({ workout }) => {
         
         const json = await response.json()
 
+        if(!response.ok){
+            console.log('error')
+        }
         if(response.ok){
+            console.log(`Workout with id:${workout._id} deleted`,json)
             dispatch({type: 'DELETE_WORKOUT', payload: json})
         }
     }
